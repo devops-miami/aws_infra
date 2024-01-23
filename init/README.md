@@ -10,3 +10,10 @@ Only a main and provider. Because this section only runs once we don't really ne
 * Bucket - remote backend for TF
 * KMS Key - encryption using SOPs
 * DynamoDB - a couple table for managing state
+
+## Use 
+The init state runs before the whole env does in order to give us pre reqs. 
+
+```sh
+tf apply --vars-file ../env/init.tfvars
+```
