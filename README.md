@@ -12,6 +12,20 @@ AWS Infra for blog for new job
 
 This setup assumes you are beginning from a brand new AWS account. 
 
-Login to aws and go to `IAM Identity Center`
+Create an organization. Using organizations allow for billing, least priviledge, 
 
+* Login to aws and go to `IAM Identity Center` and create a new organization. 
+* Confirm the identity source
+* Create the first user and superAdmin group
+* Create permission set to AdministratorAccess
+* Assign users or groups to the org
+* Use the new SSO server and login the new user
+* Create a token for the TF
 
+## Remote State 
+
+## Secrets Management
+I use `Mozilla SOPs` and `KMS` to encrypt secrets. 
+The init process revolves around configuring these import items before the rest of the environment. 
+
+[ref](https://medium.com/@javier.vlopez/using-mozilla-sops-terraform-provider-c48f65b73ca)
