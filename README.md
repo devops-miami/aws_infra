@@ -7,7 +7,11 @@ AWS Infra for blog for new job
 * network - networking items usually live outside of inidivual projects
 * service - service we are deploying
 
-## Setup Auth
-Create a new token in AWS console for terraform and aws cli
+## First Time Run
+*This section of the read me is dedicated to first time steps which do not need to be repeated.*
+
+This setup assumes you are beginning from a brand new AWS account. 
+
+Login to aws and go to `IAM Identity Center`
 
 
