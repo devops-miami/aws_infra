@@ -12,15 +12,10 @@ variable "network" {
 variable "subnetworks" {
     type = map
     default = {
-         subnet01 = {
+         subnet99 = {
             cidr_block = "10.0.1.0/24"
             vpc = "dev-vpc"
             tag = "subnet01"
-        }
-         subnet02 = {
-            cidr_block = "10.0.2.0/24"
-            vpc = "dev-vpc"
-            tag = "subnet02"
         }
     }
 }
