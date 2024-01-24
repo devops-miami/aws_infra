@@ -29,3 +29,10 @@ I use `Mozilla SOPs` and `KMS` to encrypt secrets.
 The init process revolves around configuring these import items before the rest of the environment. 
 
 [ref](https://medium.com/@javier.vlopez/using-mozilla-sops-terraform-provider-c48f65b73ca)
+
+#### Logs
+* Day 1 - Setup the init folder and remote backend
+* Day 2 - Configure SOPs with Terraform tfvars for env/secrets
+* Day 3 - Setup my first EKS cluster with basic IAM
+* Day 4 - Dive into securing EKS 
+* Day 5 - Convert code to relevant project
