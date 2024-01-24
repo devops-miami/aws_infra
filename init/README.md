@@ -44,3 +44,5 @@ At this point I'll jump over to the env folder.
 ```sh
 sops --kms ${KMS_ARN} --encrypt env/dev.tfvars.json > env/dev.enc.tfvars.json 
 ```
+
+We now have encrypted secrets. Move over to the Network folder to start using them.
