@@ -5,17 +5,17 @@ resource "aws_vpc" "dev" {
     instance_tenancy  = "default"
 
     tags = {
-        Name = each.value.network
+        name = each.value.tag
     }
 }
 
 resource "aws_subnet" "dev" {
-    for_each    =   var.sub_network
+    for_each    =   var.subnetworks
 
-    vpc_id      = aws_vpc.dev.id
+    vpc_id      = aws_vpc.dev[each.value.vpc].id
     cidr_block  = each.value.cidr_block
 
     tags = {
-        Name = "dev"
+        name = each.value.tag
     }
 }

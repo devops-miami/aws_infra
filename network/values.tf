@@ -4,23 +4,23 @@ variable "network" {
     default = {
         dev-vpc = {
             cidr_block = "10.0.0.0/16"
-            tag = "dev - network"
-            
+            tag = "dev-vpc"
         }
     }
 }
-variable "sub_network" {
+
+variable "subnetworks" {
     type = map
     default = {
          subnet01 = {
             cidr_block = "10.0.1.0/24"
             vpc = "dev-vpc"
-            tag = "dev - network"
+            tag = "subnet01"
         }
          subnet02 = {
             cidr_block = "10.0.2.0/24"
             vpc = "dev-vpc"
-            tag = "dev - network"
+            tag = "subnet02"
         }
     }
 }
