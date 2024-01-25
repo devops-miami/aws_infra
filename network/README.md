@@ -1,11 +1,21 @@
-## Network
+## Network Org
 VPC and subnets are essential but often run in their own space and ran by a dedicated team. 
 
 I keep things apart just to emulate that part of the work. 
 
-To run the dev environment the command looks like this:
+## Terraform + SOPs
+To run the dev environment network the commands looks like this:
 ```sh
+# Stand up network
 sops exec-file --filename tmp.json ../env/dev.enc.tfvars.json 'terraform apply --var-file={}'
+# Destroy Env
+sops exec-file --filename tmp.json ../env/dev.enc.tfvars.json 'terraform destroy --var-file={}'
 ```
 
-This setup will decrypt the json file we hide our env vars in and pass it along to terraform. Previously I was using Terragrunt as a wrapper to perform this option but it seems like this new feature came out a few years ago that lets me run barebones. [ref](https://github.com/getsops/sops/pull/761)
+These commands will decrypt the json file in the env folder with sops, call a command (`terraform`), and pass it the decrypted envs file. 
+
+Previously, I was using Terragrunt as a wrapper but, it seems like this new feature came out a few years ago that lets me run barebones. 
+
+### Note
+The `{}` is redirected input/file from `SOPS`. 
+[ref](https://github.com/getsops/sops/pull/761)

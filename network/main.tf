@@ -12,7 +12,7 @@ resource "aws_vpc" "dev" {
 resource "aws_subnet" "dev" {
     for_each    =   var.subnetworks
 
-    vpc_id      = aws_vpc.dev[each.value.vpc].id
+    vpc_id      = aws_vpc.dev[each.value.vpc].id # Creates a dependency to the resouce above
     cidr_block  = each.value.cidr_block
 
     tags = {

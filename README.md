@@ -4,7 +4,7 @@ AWS Infra for blog for new job
 ## Folder Structure
 * env - enviromental variables (dev, prod) 
 * init - first boot items (state bucket, iam user)
-* network - networking items usually live outside of inidivual projects
+* network - networking items usually live outside of inidivual projects (when not using service mesh or vpc connect)
 * service - service we are deploying
 
 ## First Time Run

@@ -14,8 +14,11 @@ crash.*.log
 # password, private keys, and other secrets. These should not be part of version 
 # control as they are data points which are potentially sensitive and subject 
 # to change depending on the environment.
-*.tfvars
-*.tfvars.json
+## NOTE: While this is normally best practice it allows for configurations to be lost
+## Larger orgs have dedicated secret stores but for cost purposes we keep our none secret envs
+## plaintext and encrypt senestive files using SOPs/KMS allowing us to store all these configs in a repo securely
+# *.tfvars
+# *.tfvars.json
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in

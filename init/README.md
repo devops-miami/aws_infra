@@ -5,9 +5,9 @@ Only a main and provider. Because this section only runs once we don't really ne
 Some things are assumed like:
 * SOPs is installed
 * AWS is installed
-* The org configure is complete
-* A user token with perms is available
-* Terraform-docs is installed for tfvars conversions
+* The org configuration is complete
+* A user and token with perms is available
+* Terraform-docs are installed for tfvars conversions
 
 ## Provider
 * Say we need AWS stuff
@@ -46,3 +46,6 @@ sops --kms ${KMS_ARN} --encrypt env/dev.tfvars.json > env/dev.enc.tfvars.json
 ```
 
 We now have encrypted secrets. Move over to the Network folder to start using them.
+
+## Code Style
+I like to keep the core code the same across envs and pass the required changes between envs like scaling and unqiue configs to the env var file we pass. The forloops will allow us to mutate the final result and keeps our code dry. It also locks things down a bit so you don't get a huge drift between the environments.
