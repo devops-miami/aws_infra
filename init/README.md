@@ -49,3 +49,9 @@ We now have encrypted secrets. Move over to the Network folder to start using th
 
 ## Code Style
 I like to keep the core code the same across envs and pass the required changes between envs like scaling and unqiue configs to the env var file we pass. The forloops will allow us to mutate the final result and keeps our code dry. It also locks things down a bit so you don't get a huge drift between the environments.
+
+## Resources
+Links to resources used
+[s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
+[dynamo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table)
+[kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key)

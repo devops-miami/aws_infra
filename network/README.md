@@ -19,3 +19,8 @@ Previously, I was using Terragrunt as a wrapper but, it seems like this new feat
 ### Note
 The `{}` is redirected input/file from `SOPS`. 
 [ref](https://github.com/getsops/sops/pull/761)
+
+### Resources
+References to resrouces
+[subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
+[s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)

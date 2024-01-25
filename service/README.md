@@ -12,3 +12,8 @@ sops exec-file --filename tmp.json ../env/dev.enc.tfvars.json 'terraform apply -
 # Bring down the cluster
 sops exec-file --filename tmp.json ../env/dev.enc.tfvars.json 'terraform destroy --var-file={}'
 ```
+
+### Resources
+References to resrouces
+[subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
+[eks](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#example-iam-role-for-eks-cluster)
