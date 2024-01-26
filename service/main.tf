@@ -41,9 +41,9 @@ resource "aws_eks_cluster" "dev" {
         public_access_cidrs     = each.value.public_access
     }
 
-    # Messing with this can get us the new setup mentioned in at Reinvent
     access_config {
-        authentication_mode                         = "CONFIG_MAP"
+        # We really want API! 
+        authentication_mode                         = "API_AND_CONFIG_MAP"
         bootstrap_cluster_creator_admin_permissions = true
     }
 

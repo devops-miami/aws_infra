@@ -4,7 +4,9 @@ This folder runs like the network team but belongs to a service or department.
 In this case we will use it to stand up the roles and EKS cluster we need for a service. 
 
 ### Use
-*After standing up the network*
+`BEFORE you run this section it is assumed you have ran stood up the network section and
+updated the env file with the new subnet ids.`
+
 Stand up the cluster:
 ```sh
 # Stand up the cluster
@@ -31,3 +33,4 @@ kubectl cluster-info
 References to resrouces
 [subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 [eks](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#example-iam-role-for-eks-cluster)
+[access_entry](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_access_entry)
