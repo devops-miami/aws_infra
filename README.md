@@ -34,5 +34,5 @@ The init process revolves around configuring these import items before the rest 
 * Day 1 - Setup the aws org, sso, user, init folder and remote backend
 * Day 2 - Configure SOPs with Terraform tfvars for env/secrets, forloops, network
 * Day 3 - Setup my first EKS cluster with basic IAM
-* Day 4 - Dive into securing EKS + custom helm chart refresh
-* Day 5 - Convert code to relevant project
+* Day 4 - Dive into securing EKS + logging setup
+* Day 5 - Do the do -- if its the same, access policies
