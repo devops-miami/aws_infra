@@ -16,6 +16,10 @@ These commands will decrypt the json file in the env folder with sops, call a co
 
 Previously, I was using Terragrunt as a wrapper but, it seems like this new feature came out a few years ago that lets me run barebones. 
 
+## Important
+Each time we bring this section of the environment up and down we need to update the values file.
+The subnet-id's will be unique and in the case of a managed network would normally not change. 
+
 ### Note
 The `{}` is redirected input/file from `SOPS`. 
 [ref](https://github.com/getsops/sops/pull/761)

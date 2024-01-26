@@ -19,7 +19,16 @@ variable "iam_roles" {
 variable "policy_attachments" {
     type = map
     default = {
-         iam_role99 = {
+         policy_attachments99 = {
+            keys = "values"
+        }
+    }
+}
+
+variable "cloudwatch_log_group" {
+    type = map
+    default = {
+         cloudwatch_log_group99 = {
             keys = "values"
         }
     }

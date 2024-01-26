@@ -26,4 +26,4 @@ resource "aws_dynamodb_table" "terraform-lock" {
     tags = {
         "Name" = each.value.tag
     }
-  }
+}

@@ -16,17 +16,29 @@ resource "aws_iam_role_policy_attachment" "dev" {
     # Reference: https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html
 }
 
+resource "aws_cloudwatch_log_group" "default" {
+    for_each = var.clusters
+    # The log group name format is /aws/eks/<cluster-name>/cluster
+    # Reference: https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html
+    name              = "/aws/eks/${each.key}/cluster"
+    retention_in_days = 2
+}
+
 ## EKS Cluster Stuffs 
 resource "aws_eks_cluster" "dev" {
     for_each = var.clusters
-    
+
     name     = each.key
     role_arn = aws_iam_role.dev[each.value.role].arn
+
+    enabled_cluster_log_types = ["api", "audit"]
 
     vpc_config {
         subnet_ids = each.value.subnet_ids
         endpoint_private_access = true
-        endpoint_public_access  = false
+        endpoint_public_access  = true
+        # Restrict the control plane to only my public ip (or work vpn?)
+        public_access_cidrs     = each.value.public_access
     }
 
     # Messing with this can get us the new setup mentioned in at Reinvent
@@ -35,4 +47,5 @@ resource "aws_eks_cluster" "dev" {
         bootstrap_cluster_creator_admin_permissions = true
     }
 
+    depends_on = [aws_cloudwatch_log_group.default]
 }
