@@ -25,6 +25,7 @@ Create an organization. Using organizations allow for billing, least priviledge,
 * Create a token for the TF
 
 ## Remote State 
+We provision a couple different `DynamoDB` tables and an `s3` bucket to store our TF state so others can jump in on the fun. :D 
 
 ## Secrets Management
 I use `Mozilla SOPs` and `KMS` to encrypt secrets. 
