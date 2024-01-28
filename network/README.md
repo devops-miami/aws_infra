@@ -28,3 +28,4 @@ The `{}` is redirected input/file from `SOPS`.
 References to resrouces
 [subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 [s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
+[internet gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway)

@@ -20,3 +20,13 @@ resource "aws_subnet" "dev" {
         name = each.value.tag
     }
 }
+
+resource "aws_internet_gateway" "gw" {
+    for_each = var.gateways
+
+    vpc_id = aws_vpc.dev[each.key].id # Creates a dependency to the resouce above
+
+    tags = {
+        Name = each.value.tag
+    }
+}

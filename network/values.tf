@@ -19,3 +19,14 @@ variable "subnetworks" {
         }
     }
 }
+
+variable "gateways" {
+    type = map
+    default = {
+         gateway99 = {
+            cidr_block = "10.0.1.0/24"
+            vpc = "dev-vpc"
+            tag = "subnet01"
+        }
+    }
+}
