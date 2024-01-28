@@ -29,8 +29,8 @@ For users who are not me (haha), this might be a lot. The way you run this is in
 * network
 * service
 
-*Each section has it's respective readme with instructions and detailed notes for deployment.
-*
+*Each section has it's respective readme with instructions and detailed notes for deployment.*
+
 ## Remote State 
 We provision a couple different `DynamoDB` tables and an `s3` bucket to store our TF state so others can jump in on the fun. :D 
 
