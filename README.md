@@ -1,6 +1,8 @@
 # aws_infra
 AWS Infra for blog for new job
 
+[Blog Post](https://devops.miami/project-aws/)
+
 ## Folder Structure
 * env - enviromental variables (dev, prod) 
 * init - first boot items (state bucket, iam user)
