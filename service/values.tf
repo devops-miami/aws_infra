@@ -42,3 +42,12 @@ variable "access_entry" {
         }
     }
 }
+
+variable "node_pools" {
+    type = map
+    default = {
+         access_entry99 = {
+            keys = "values"
+        }
+    }
+}
