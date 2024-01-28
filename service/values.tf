@@ -33,3 +33,12 @@ variable "cloudwatch_log_group" {
         }
     }
 }
+
+variable "access_entry" {
+    type = map
+    default = {
+         access_entry99 = {
+            keys = "values"
+        }
+    }
+}
