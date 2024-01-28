@@ -7,6 +7,8 @@ In this case we will use it to stand up the roles and EKS cluster we need for a 
 `BEFORE you run this section it is assumed you have ran stood up the network section and
 updated the env file with the new subnet ids.`
 
+Find your public ip address using something like `ipchicken.com` and add it to the public_access section in the cluster config. 
+
 Stand up the cluster:
 ```sh
 # Stand up the cluster
